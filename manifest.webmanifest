@@ -1,0 +1,9 @@
+{
+  "name": "Aurelia Salon & Spa",
+  "short_name": "Aurelia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15100f",
+  "theme_color": "#b9825b",
+  "description": "Luxury salon, spa and bridal booking concept."
+}

@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurelia Salon & Spa | Hair, Skin, Bridal & Wellness</title>
+  <meta name="description" content="A photo-first luxury salon, spa and beauty clinic concept with online appointments, bridal packages, consultations and WhatsApp booking.">
+  <meta name="keywords" content="luxury salon website, beauty clinic website, bridal makeup website, spa booking website, AJAYNXT">
+  <meta name="author" content="AJAYNXT">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#15100f">
+  <link rel="canonical" href="https://salon.ajaynxt.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aurelia Salon & Spa">
+  <meta property="og:description" content="Hair, skin, spa and bridal appointments in one premium experience.">
+  <meta property="og:url" content="https://salon.ajaynxt.com/">
+  <meta property="og:image" content="https://images.pexels.com/photos/34025154/pexels-photo-34025154.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://salon.ajaynxt.com/#website",
+        "url":"https://salon.ajaynxt.com/",
+        "name":"Aurelia Salon & Spa",
+        "description":"Luxury salon, spa, bridal and beauty consultation concept website.",
+        "publisher":{"@id":"https://salon.ajaynxt.com/#business"}
+      },
+      {
+        "@type":"BeautySalon",
+        "@id":"https://salon.ajaynxt.com/#business",
+        "name":"Aurelia Salon & Spa",
+        "url":"https://salon.ajaynxt.com/",
+        "telephone":"+91-99295-62585",
+        "priceRange":"₹₹₹",
+        "image":"https://images.pexels.com/photos/7750117/pexels-photo-7750117.jpeg",
+        "areaServed":"India",
+        "knowsAbout":["Hair styling","Hair colour","Facials","Spa therapies","Bridal makeup","Nail care"],
+        "openingHoursSpecification":[
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"19:00"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="#home" aria-label="Aurelia home">
+      <span class="brand-emblem">A</span>
+      <span><strong>AURELIA</strong><small>SALON · SPA · BRIDAL</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#transformation">Transformations</a>
+      <a href="#bridal">Bridal</a>
+      <a href="#specialists">Specialists</a>
+      <a href="#appointment">Appointment</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-book" href="#appointment">Book Now</a>
+  </div>
+</header>
+
+<aside class="customizer">
+  <button class="customizer-toggle" id="customizerToggle">Customize</button>
+  <div class="customizer-panel" id="customizerPanel">
+    <section>
+      <h3>Hero Style</h3>
+      <div class="style-list" id="styleList"></div>
+    </section>
+    <section>
+      <h3>Color Library</h3>
+      <input id="colorSearch" type="search" placeholder="Search color or enter #HEX">
+      <div class="color-list" id="colorList"></div>
+      <div class="control-grid">
+        <input id="colorPicker" type="color" value="#b9825b" aria-label="Choose accent color">
+        <button id="lockColor">Lock Color</button>
+      </div>
+    </section>
+    <section>
+      <h3>Text Library</h3>
+      <div class="text-list" id="textList"></div>
+      <button class="wide-control" id="lockText">Lock Text</button>
+    </section>
+    <section>
+      <h3>Font Family</h3>
+      <input id="fontSearch" type="search" placeholder="Search font">
+      <select id="fontSelect">
+        <option value="Inter, Arial, sans-serif">Inter</option>
+        <option value="Manrope, Arial, sans-serif">Manrope</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="'Times New Roman', serif">Times New Roman</option>
+        <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+        <option value="Arial, sans-serif">Arial</option>
+      </select>
+      <button class="wide-control" id="lockFont">Lock Font</button>
+    </section>
+    <section class="control-grid">
+      <button id="themeToggle">Light Mode</button>
+      <button id="autoToggle">Pause Auto</button>
+    </section>
+  </div>
+</aside>
+
+<main id="main">
+  <section class="hero hero-01" id="home">
+    <div class="hero-image" id="heroImage"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content shell">
+      <div class="hero-copy">
+        <span class="eyebrow" id="heroKicker">Hair · Skin · Spa · Bridal</span>
+        <h1 id="heroTitle">Beauty, Designed Around You.</h1>
+        <p id="heroText">Personalised services in a calm, premium studio.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#appointment">Book Appointment</a>
+          <a class="button outline" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-style-bar">
+      <button id="previousStyle" aria-label="Previous hero">‹</button>
+      <div id="styleDots"></div>
+      <button id="nextStyle" aria-label="Next hero">›</button>
+      <span id="styleName">01 · Editorial Hair</span>
+    </div>
+  </section>
+
+  <section class="booking-ribbon">
+    <div class="shell">
+      <div><small>Ready when you are</small><strong>Choose a service, specialist and time.</strong></div>
+      <a href="#appointment">Book an appointment</a>
+      <a href="https://wa.me/919929562585">WhatsApp consultation</a>
+    </div>
+  </section>
+
+  <section class="section shell" id="services">
+    <div class="section-heading reveal">
+      <div>
+        <span class="eyebrow">Service Menu</span>
+        <h2>Start with what you need today</h2>
+      </div>
+      <p>Clear categories, indicative duration and consultation routes help clients choose without scrolling through a giant price list.</p>
+    </div>
+    <div class="service-filter reveal" id="serviceFilter"></div>
+    <div class="service-grid" id="serviceGrid"></div>
+  </section>
+
+  <section class="section transformation-section" id="transformation">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <div>
+          <span class="eyebrow">Before & After</span>
+          <h2>Show the transformation, not a promise</h2>
+        </div>
+        <p>Use genuine client photographs with written permission, matching light and an honest description of the service performed.</p>
+      </div>
+
+      <div class="comparison-layout">
+        <div class="comparison reveal" id="comparison">
+          <img class="comparison-before" src="https://images.pexels.com/photos/32856321/pexels-photo-32856321.jpeg?cs=srgb&dl=pexels-nobleseed-32856321.jpg&fm=jpg" alt="Hair before styling concept image">
+          <div class="comparison-after" id="comparisonAfter">
+            <img src="https://images.pexels.com/photos/3993290/pexels-photo-3993290.jpeg?cs=srgb&dl=pexels-cottonbro-3993290.jpg&fm=jpg" alt="Hair colour service concept image">
+          </div>
+          <span class="before-label">Before</span>
+          <span class="after-label">After</span>
+          <input id="comparisonRange" type="range" min="0" max="100" value="52" aria-label="Compare before and after">
+        </div>
+        <article class="comparison-copy reveal">
+          <span class="eyebrow">Colour Transformation</span>
+          <h3>Consultation first. Colour plan second.</h3>
+          <p>Show the starting condition, desired result, technique, maintenance plan and expected future sessions.</p>
+          <div class="comparison-facts">
+            <span>Hair consultation</span>
+            <span>Strand-test option</span>
+            <span>Maintenance guidance</span>
+            <span>Home-care plan</span>
+          </div>
+          <a class="button primary" href="#appointment">Book Hair Consultation</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bridal-section" id="bridal">
+    <div class="bridal-photo"></div>
+    <div class="shell bridal-grid">
+      <div class="bridal-copy reveal">
+        <span class="eyebrow">Bridal Studio</span>
+        <h2>A bridal look should still feel like you.</h2>
+        <p>Trial, skin preparation, hair direction, event schedule and team travel are handled before the wedding day.</p>
+        <div class="bridal-actions">
+          <a class="button primary" href="#appointment">Book Bridal Trial</a>
+          <button class="button outline" id="bridalGuide">Request Bridal Guide</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="package-grid">
+      <article class="package-card reveal">
+        <span>Bridal Trial</span>
+        <h3>Look Consultation</h3>
+        <p>Skin, outfit, jewellery, hair, makeup references and photography conditions.</p>
+        <ul><li>Reference review</li><li>One trial look</li><li>Product and prep notes</li></ul>
+        <button data-package="Bridal Look Consultation">Request Details</button>
+      </article>
+      <article class="package-card featured reveal">
+        <span>Wedding Day</span>
+        <h3>Signature Bride</h3>
+        <p>Makeup, hair, draping and touch-up planning for the main wedding event.</p>
+        <ul><li>Makeup and hair</li><li>Draping support</li><li>Schedule planning</li></ul>
+        <button data-package="Signature Bride">Request Details</button>
+      </article>
+      <article class="package-card reveal">
+        <span>Multi-Event</span>
+        <h3>Wedding Wardrobe</h3>
+        <p>Coordinated beauty direction for engagement, mehendi, sangeet and wedding.</p>
+        <ul><li>Multiple event looks</li><li>Team and travel plan</li><li>Look continuity</li></ul>
+        <button data-package="Wedding Wardrobe">Request Details</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section clinic-section">
+    <div class="shell clinic-grid">
+      <div class="clinic-image reveal"></div>
+      <div class="reveal">
+        <span class="eyebrow">Skin & Beauty Consultation</span>
+        <h2>Professional consultation before advanced services</h2>
+        <p>Service suitability, expected experience, contraindications, aftercare and realistic limitations should be discussed before booking.</p>
+        <div class="clinic-points">
+          <span>Skin goals and history</span>
+          <span>Service suitability</span>
+          <span>Patch-test guidance</span>
+          <span>Aftercare information</span>
+        </div>
+        <a class="button primary" href="#appointment">Book Consultation</a>
+        <small class="disclaimer">This portfolio concept does not provide medical advice or claim treatment outcomes.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="specialists">
+    <div class="section-heading reveal">
+      <div>
+        <span class="eyebrow">Specialists</span>
+        <h2>Choose by expertise, not a generic team photo</h2>
+      </div>
+      <p>Each profile should show real training, services, experience and booking availability.</p>
+    </div>
+    <div class="specialist-grid">
+      <article class="specialist-card reveal">
+        <div class="specialist-photo s1"></div>
+        <h3>Rhea Kapoor</h3><p>Hair Design & Colour</p><span>Concept profile</span>
+        <button data-specialist="Rhea Kapoor">Book with Rhea</button>
+      </article>
+      <article class="specialist-card reveal">
+        <div class="specialist-photo s2"></div>
+        <h3>Meera Shah</h3><p>Bridal Makeup</p><span>Concept profile</span>
+        <button data-specialist="Meera Shah">Book with Meera</button>
+      </article>
+      <article class="specialist-card reveal">
+        <div class="specialist-photo s3"></div>
+        <h3>Anika Rao</h3><p>Skin & Facial Services</p><span>Concept profile</span>
+        <button data-specialist="Anika Rao">Book with Anika</button>
+      </article>
+      <article class="specialist-card reveal">
+        <div class="specialist-photo s4"></div>
+        <h3>Tara Singh</h3><p>Spa & Wellness</p><span>Concept profile</span>
+        <button data-specialist="Tara Singh">Book with Tara</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section price-section">
+    <div class="shell price-layout">
+      <div class="reveal">
+        <span class="eyebrow">Indicative Menu</span>
+        <h2>Prices with duration and conditions</h2>
+        <p>Use “from” pricing only where length, product use or complexity genuinely changes the final amount.</p>
+      </div>
+      <div class="price-list reveal" id="priceList"></div>
+    </div>
+  </section>
+
+  <section class="section experience-section">
+    <div class="shell experience-grid">
+      <div class="experience-photo reveal"></div>
+      <div class="reveal">
+        <span class="eyebrow">The Studio Experience</span>
+        <h2>Good service starts before the chair</h2>
+        <p>Clients need clean spaces, consultation, clear timing, transparent add-ons and respectful aftercare communication.</p>
+        <div class="experience-points">
+          <article><b>01</b><span>Consultation</span></article>
+          <article><b>02</b><span>Service plan</span></article>
+          <article><b>03</b><span>Appointment</span></article>
+          <article><b>04</b><span>Aftercare</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section appointment-section" id="appointment">
+    <div class="shell appointment-grid">
+      <div class="reveal">
+        <span class="eyebrow">Book an Appointment</span>
+        <h2>Choose the service and a practical time</h2>
+        <p>The demo form opens WhatsApp with all appointment details already organised.</p>
+        <div class="availability-note">
+          <span>Monday–Saturday: 10 AM–8 PM</span>
+          <span>Sunday: 11 AM–7 PM</span>
+          <span>Bridal trials by confirmation</span>
+        </div>
+      </div>
+      <form class="appointment-form reveal" id="appointmentForm">
+        <label>Full Name<input name="name" required></label>
+        <label>Phone / WhatsApp<input name="phone" inputmode="tel" required></label>
+        <label>Service<select name="service" id="appointmentService"></select></label>
+        <label>Preferred Specialist<select name="specialist"><option>First Available</option><option>Rhea Kapoor</option><option>Meera Shah</option><option>Anika Rao</option><option>Tara Singh</option></select></label>
+        <label>Date<input name="date" type="date" required></label>
+        <label>Time Slot<select name="time"><option>10:00 AM–12:00 PM</option><option>12:00 PM–2:00 PM</option><option>2:00 PM–4:00 PM</option><option>4:00 PM–6:00 PM</option><option>6:00 PM–8:00 PM</option></select></label>
+        <label class="full">Notes<textarea name="notes" rows="4" placeholder="Hair length, bridal date, skin concern or other relevant information"></textarea></label>
+        <button class="button primary full" type="submit">Book on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section location-section">
+    <div class="shell location-grid">
+      <div class="location-card reveal">
+        <span class="eyebrow">Visit the Studio</span>
+        <h2>Location, hours and parking should be easy to find</h2>
+        <p>Replace this concept block with the client’s verified address, Google Business Profile, directions and branch phone number.</p>
+        <div class="hours">
+          <span><b>Mon–Sat</b> 10:00 AM–8:00 PM</span>
+          <span><b>Sunday</b> 11:00 AM–7:00 PM</span>
+          <span><b>WhatsApp</b> +91 99295 62585</span>
+        </div>
+        <a class="button primary" href="https://wa.me/919929562585">Ask for Directions</a>
+      </div>
+      <div class="map-art reveal">
+        <i></i><i></i><i></i><span>AURELIA</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section">
+    <div class="shell faq-grid">
+      <div class="reveal">
+        <span class="eyebrow">Frequently Asked</span>
+        <h2>Answer before the client has to call</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary>Do I need a consultation before hair colour?</summary><p>A consultation helps assess the starting condition, previous colour, desired result, maintenance and whether a strand test is appropriate.</p></details>
+        <details><summary>Should bridal makeup include a trial?</summary><p>A trial is useful for discussing skin, outfit, jewellery, photography conditions, product preferences and the wedding-day timeline.</p></details>
+        <details><summary>Are service prices final?</summary><p>The concept menu is illustrative. A real salon should clearly explain when hair length, product use, complexity or add-ons change the price.</p></details>
+        <details><summary>Are the specialists and results shown here real?</summary><p>No. This is a portfolio concept. Replace names, qualifications, photographs, prices and transformations with verified client content.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="shell contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Built by AJAYNXT</span>
+        <h2>Turn beauty discovery into booked appointments</h2>
+        <p>This showcase combines a premium visual first impression with practical service selection and WhatsApp leads.</p>
+        <div class="contact-points"><span>Salon websites</span><span>Bridal artist portfolios</span><span>Spa and beauty clinic websites</span></div>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <label>Name<input name="name" required></label>
+        <label>Business Name<input name="business"></label>
+        <label>Phone / WhatsApp<input name="phone" inputmode="tel" required></label>
+        <label>Business Type<select name="type"><option>Salon</option><option>Spa</option><option>Beauty Clinic</option><option>Bridal Makeup Studio</option></select></label>
+        <label class="full">Requirement<textarea name="message" rows="5"></textarea></label>
+        <button class="button primary full" type="submit">Send Website Enquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-grid">
+    <div>
+      <a class="brand" href="#home"><span class="brand-emblem">A</span><span><strong>AURELIA</strong><small>SALON · SPA · BRIDAL</small></span></a>
+      <p>Photo-first salon website concept by AJAYNXT.</p>
+    </div>
+    <div><strong>Explore</strong><a href="#services">Services</a><a href="#bridal">Bridal</a><a href="#appointment">Book</a></div>
+    <div><strong>AJAYNXT</strong><a href="https://ajaynxt.com">ajaynxt.com</a><a href="tel:+919929562585">+91 99295 62585</a></div>
+  </div>
+  <div class="shell footer-bottom">Concept content only. Replace prices, specialist profiles, images, availability and claims with verified client information.</div>
+</footer>
+
+<div class="mobile-actions">
+  <a href="tel:+919929562585">Call</a>
+  <a href="https://wa.me/919929562585">WhatsApp</a>
+  <a href="#services">Services</a>
+  <a href="#appointment">Book</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
